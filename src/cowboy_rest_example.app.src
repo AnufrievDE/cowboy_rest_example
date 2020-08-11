@@ -1,0 +1,20 @@
+{application, cowboy_rest_example,
+ [{description, "Cowboy with mariadb rest example"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {mod, {cowboy_rest_example_app, []}},
+  {applications,
+   [kernel,
+    stdlib,
+    cowboy,
+    poolboy,
+    mysql,
+    jose,
+    jiffy
+   ]},
+  {env,[]},
+  {modules, []},
+
+  {licenses, ["Apache 2.0"]},
+  {links, []}
+ ]}.

@@ -1,0 +1,26 @@
+version: '3.4'
+
+volumes:
+  mysql_data: {}
+
+services:
+    cowboy_rest_example:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        env_file:
+            - .env
+        ports:
+            - "${WEB_SERVER_PORT}:${WEB_SERVER_PORT}"
+        depends_on:
+            - db
+    db:
+        image: mariadb:10.5.3
+        env_file:
+            - .env
+        ports:
+            - '${DB_PORT}:3306'
+        volumes:
+            - mysql_data:/var/lib/mysql/data
+            - ./sql:/docker-entrypoint-initdb.d
+        command: ['mysqld', '--character-set-server=utf8', '--collation-server=utf8_general_ci']
