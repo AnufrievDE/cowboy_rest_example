@@ -3,7 +3,7 @@
 This is an erlang application created to show up a way of use of the cowboy web server.
 
 It allows to:
-1. Register user on a server from json:  
+1. Register user on a server from JSON:  
     `http://localhost:8080/register`
 2. Authenticate user from JSON:  
     `http://localhost:8080/login`
@@ -11,8 +11,8 @@ It allows to:
 4. List users:  
     `http://localhost:8080/users`
 5. Get user (retrieving id from url):  
-    `http://localhost:8080/user/1`
-6. Update password from json:  
+    `http://localhost:8080/userы/1`
+6. Update password from JSON:  
     `http://localhost:8080/update_password`
 
 ## Configuration parameters (with default values):
