@@ -11,7 +11,7 @@ It allows to:
 4. List users:  
     `http://localhost:8080/users`
 5. Get user (retrieving id from url):  
-    `http://localhost:8080/userы/1`
+    `http://localhost:8080/users/1`
 6. Update password from JSON:  
     `http://localhost:8080/update_password`
 
